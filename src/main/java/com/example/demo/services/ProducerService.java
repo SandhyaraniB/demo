@@ -11,6 +11,7 @@ public class ProducerService {
     KafkaTemplate<String , String> kafkaTemplate;
 
     public void pushingToKafka(String message){
+        System.out.println("Input message : "+message);
         kafkaTemplate.send("Chocolate",message);
     }
 }
